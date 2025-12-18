@@ -11,7 +11,7 @@ if choice == "REGISTER" :
     name = st.text_input("USERNAME")
     password = st.text_input("PASSWORD",type = "password")
     if st.button("REGISTER"):
-        cursor.execute("""INSERT INTO users(name,password) VALUES (?,?)""",(name,password))
+        cursor.execute("INSERT INTO users(name,password) VALUES (?,?)",(name,password))
         conn.commit()
 if choice == "LOGIN" :
     name = st.text_input("USERNAME")
